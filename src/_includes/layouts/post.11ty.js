@@ -1,3 +1,8 @@
-module.exports = function(data) {
-    return `<p>${data.name}</p>`;
-};
+module.exports = {
+    data: {
+      layout: "base",
+    },
+    render(data) {
+      return data.content;
+    }
+  }
