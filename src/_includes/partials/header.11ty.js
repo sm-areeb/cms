@@ -2,7 +2,7 @@ module.exports = function (data) {
   return /*html*/ `
   <nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
     <div class="container">
-        <a class="navbar-brand d-md-none" href="#">
+        <a class="navbar-brand" href="#">
             <img src="/images/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
             Bootstrap
         </a>
