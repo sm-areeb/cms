@@ -18,9 +18,7 @@ module.exports = function (data) {
             <div class="offcanvas-body">
                 <ul class="navbar-nav flex-grow-1 justify-content-between">
                     <li class="nav-item"><a class="nav-link" href="#">
-                            <svg class="bi" width="24" height="24">
-                                <use xlink:href="#aperture"></use>
-                            </svg>
+                        <img src="/images/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
                         </a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Tour</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
@@ -29,9 +27,7 @@ module.exports = function (data) {
                     <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">
-                            <svg class="bi" width="24" height="24">
-                                <use xlink:href="#cart"></use>
-                            </svg>
+                        <img src="/images/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
                         </a></li>
                 </ul>
             </div>
