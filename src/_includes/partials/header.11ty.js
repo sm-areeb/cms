@@ -17,7 +17,7 @@ module.exports = function (data) {
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav flex-grow-1 justify-content-between">
-                    <li class="nav-item"><a class="nav-link" href="#">
+                    <li class="nav-item d-md-none"><a class="nav-link" href="#">
                         <img src="/images/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
                         </a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Tour</a></li>
