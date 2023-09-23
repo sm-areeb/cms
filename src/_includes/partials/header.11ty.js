@@ -10,7 +10,7 @@ module.exports = function (data) {
             aria-controls="#offcanvas" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="#offcanvas" aria-labelledby="#offcanvasLabel">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="#offcanvasLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="#offcanvasLabel">Aperture</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
