@@ -1,5 +1,6 @@
 const Header = require('../partials/header.11ty.js');
 const Footer = require('../partials/footer.11ty.js');
+const Hero = require('../components/hero/centered');
 module.exports = function(data) {
     return /*html*/`
         <!DOCTYPE html>
@@ -13,6 +14,7 @@ module.exports = function(data) {
         </head>
         <body>
             ${Header(data)}
+            ${Hero()}
             ${data.content}
             ${Footer(data)}
             <script src="/static/js/bootstrap.bundle.min.js"></script>
