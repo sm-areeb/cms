@@ -1,7 +1,8 @@
 function SingleCarousel(props) {
   const { header, description, gallery = [], uuid } = props;
   return /*html*/ `
-        <section class="carousel carousel-single slide" id="${uuid}"  data-ride="carousel">
+    <section carousel-single>
+        <div class="carousel carousel-single slide" id="${uuid}"  data-ride="carousel">
             <pre>${JSON.stringify(props, undefined, 2)}</pre>
             ${
               header &&
@@ -62,8 +63,8 @@ function SingleCarousel(props) {
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-        </section>
-    `;
+        </div>
+        <section>`;
 }
 
 module.exports = SingleCarousel;
@@ -101,7 +102,7 @@ exports.SingleCarouselWidget = {
     { label: "UUID", name: "uuid", widget: "uuid" },
   ],
   pattern:
-    /^(\s*?)<section(.*?) class="carousel carousel-single(.*?)>(.*?)<\/section>(\s*?)$/ms,
+    /^(\s*?)<section carousel-single>(.*?)<\/section>$/ms,
   fromBlock: function (match) {
     return {
       header: match[1],
