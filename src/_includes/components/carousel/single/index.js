@@ -34,9 +34,7 @@ function SingleCarousel(props) {
                             ${
                               (title || description || linkText) &&
                               /* html */ `<div class="carousel-item-content-wrapper">
-                                <div class="carousel-item-content">
-
-                                ${
+                                <div class="carousel-item-content">${
                                   title &&
                                   /* html */ `<div className="carousel-title"><h1>${title}</h1></div>`
                                 }
@@ -113,5 +111,5 @@ exports.SingleCarouselWidget = {
     };
   },
   toBlock: SingleCarousel,
-  toPreview: SingleCarousel,
+  toPreview: '<h1>Carousel Block</h1>',
 };
