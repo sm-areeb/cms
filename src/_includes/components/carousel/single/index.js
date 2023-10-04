@@ -111,5 +111,5 @@ exports.SingleCarouselWidget = {
     };
   },
   toBlock: SingleCarousel,
-  toPreview: '<h1>Carousel Block</h1>',
+  toPreview: () => '<h1>Carousel Block</h1>',
 };
