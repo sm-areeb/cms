@@ -17,8 +17,7 @@ function SingleCarousel(props) {
                 <li data-target="#${uuid}" data-slide-to="1"></li>
                 <li data-target="#${uuid}" data-slide-to="2"></li>
             </ol>
-            <div class="carousel-inner">
-                ${gallery.map(
+            <div class="carousel-inner">${gallery.map(
                   ({
                     title,
                     description,
@@ -26,30 +25,22 @@ function SingleCarousel(props) {
                     linkHref,
                     linkText,
                     ctaButton,
-                  }) => /*html*/ `
-                    <div class="carousel-item">
-                        ${
+                  }) => /*html*/ `<div class="carousel-item">${
                           image &&
                           `<img class="carousel-image d-block w-100" src="/images/logo.svg" alt="First slide">`
-                        }
-                            ${
+                        }${
                               (title || description || linkText) &&
-                              /* html */ `<div class="carousel-item-content-wrapper">
-                                <div class="carousel-item-content">${
+                              /* html */ `<div class="carousel-item-content">${
                                   title &&
                                   /* html */ `<div className="carousel-title"><h1>${title}</h1></div>`
-                                }
-                                </div>
-                                ${
+                                }${
                                   description &&
-                                  /* html */ `<div className="carousel-description"><h1>${description}</h1></div>`
-                                }
-                                </div>
-                            ${
+                                  /* html */ `<div className="carousel-description"><p>${description}</p></div>`
+                                }${
                               linkText &&
                               /*html*/ `<a href="${linkHref}" class="carousel-link ${ctaButton && 'btn btn-primary'}">Primary link</a>`
                             }
-                            </div>`
+                                </div>`
                             }
                     </div>
                 `
