@@ -1,7 +1,6 @@
 function SingleCarousel(props) {
   const { header, description, gallery = [], uuid } = props;
-  return /*html*/ `
-    <section carousel-single>
+  return /*html*/ `<section carousel-single>
         <div class="carousel carousel-single slide" id="${uuid}"  data-ride="carousel">
             <pre>${JSON.stringify(props, undefined, 2)}</pre>
             ${
@@ -12,10 +11,7 @@ function SingleCarousel(props) {
               description &&
               /* html */ `<div className="carousel-description"><p>${description}</p></div>`
             }
-            <ol class="carousel-indicators">
-                <li data-target="#${uuid}" data-slide-to="0" class="active"></li>
-                <li data-target="#${uuid}" data-slide-to="1"></li>
-                <li data-target="#${uuid}" data-slide-to="2"></li>
+            <ol class="carousel-indicators">${gallery.map((item, index) => /*html*/`<li data-target="#${uuid}" data-slide-to="${index}" ${(index == 0) ? 'class="active"' : ''}></li>`)}
             </ol>
             <div class="carousel-inner">${gallery.map(
                   ({
@@ -55,7 +51,7 @@ function SingleCarousel(props) {
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <section>`;
+                        </section>`;
 }
 
 module.exports = SingleCarousel;
