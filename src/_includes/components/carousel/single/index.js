@@ -6,12 +6,10 @@ function SingleCarousel(props) {
             ${
               header &&
               /* html */ `<div className="carousel-header"><h1>${header}</h1></div>`
-            }
-            ${
+            }${
               description &&
               /* html */ `<div className="carousel-description"><p>${description}</p></div>`
-            }
-            <ol class="carousel-indicators">${gallery.map((item, index) => /*html*/`<li data-target="#${uuid}" data-slide-to="${index}" ${(index == 0) ? 'class="active"' : ''}></li>`)}
+            }<ol class="carousel-indicators">${gallery.map((item, index) => /*html*/`<li data-target="#${uuid}" data-slide-to="${index}" ${(index == 0) ? 'class="active"' : ''}></li>`)}
             </ol>
             <div class="carousel-inner">${gallery.map(
                   ({
@@ -35,13 +33,10 @@ function SingleCarousel(props) {
                                 }${
                               linkText &&
                               /*html*/ `<a href="${linkHref}" class="carousel-link ${ctaButton && 'btn btn-primary'}">Primary link</a>`
-                            }
-                                </div>`
-                            }
-                    </div>
+                            }</div>`
+                            }</div>
                 `
-                )}
-            </div>
+                )}</div>
             <a class="carousel-control-prev" href="#${uuid}" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
